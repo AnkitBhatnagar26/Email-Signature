@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Use the latest (edge) version of IE rendering engine -->
+    <meta name="x-apple-disable-message-reformatting" />
+    <!-- Disable auto-scale in iOS 10 Mail entirely -->
+    <title>YLIPSON</title>
+    <style href="">
+      a {
+        text-decoration: none;
+      }
+    </style>
+    <!-- CSS Reset -->
+    <style>
+      /* What it does: Remove spaces around the email design added by some email clients. */
+      /* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
+      html,
+      body {
+        margin: 0 auto !important;
+        padding: 0 !important;
+        height: 100% !important;
+        width: 100% !important;
+      }
+
+      /* What it does: Stops email clients resizing small text. */
+      /* * {
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
+      } */
+
+      /* What it does: Centers email on Android 4.4 */
+      div[style*="margin: 16px 0"] {
+        margin: 0 !important;
+      }
+
+      /* What it does: Stops Outlook from adding extra spacing to tables. */
+      table,
+      td {
+        mso-table-lspace: 0pt !important;
+        mso-table-rspace: 0pt !important;
+      }
+
+      /* What it does: Fixes webkit padding issue. Fix for Yahoo mail table alignment bug. Applies table-layout to the first 2 tables then removes for anything nested deeper. */
+      table {
+        border-spacing: 0 !important;
+        border-collapse: collapse !important;
+        table-layout: fixed !important;
+      }
+      table table table {
+        table-layout: auto;
+      }
+
+      /* What it does: Uses a better rendering method when resizing images in IE. */
+      img {
+        -ms-interpolation-mode: bicubic;
+      }
+
+      /* What it does: A work-around for email clients meddling in triggered links. */
+      *[x-apple-data-detectors],	/* iOS */
+        .x-gmail-data-detectors, 	/* Gmail */
+        .x-gmail-data-detectors *,
+        .aBn {
+        border-bottom: 0 !important;
+        cursor: default !important;
+        color: inherit !important;
+        text-decoration: none !important;
+        font-size: inherit !important;
+        font-family: inherit !important;
+        font-weight: inherit !important;
+        line-height: inherit !important;
+      }
+
+      /* What it does: Prevents Gmail from displaying an download button on large, non-linked images. */
+      .a6S {
+        display: none !important;
+        opacity: 0.01 !important;
+      }
+      /* If the above doesn't work, add a .g-img class to any image in question. */
+      img.g-img + div {
+        display: none !important;
+      }
+
+      /* What it does: Removes right gutter in Gmail iOS app: https://github.com/TedGoas/Cerberus/issues/89  */
+      /* Create one of these media queries for each additional viewport size you'd like to fix */
+      /* Thanks to Eric Lepetit @ericlepetitsf) for help troubleshooting */
+      @media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
+        /* iPhone 6 and 6+ */
+        .email-container {
+          min-width: 375px !important;
+        }
+      }
+    </style>
+
+    <!-- Progressive Enhancements -->
+    <style>
+      /* Media Queries */
+      @media screen and (max-width: 600px) {
+        .hori-line {
+          width: 200px !important;
+          margin-right: 30px !important;
+        }
+        .email-container span {
+          font-size: 6px !important;
+        }
+
+        .center-dot {
+          margin-bottom: 3px !important;
+        }
+      }
+
+      @media screen and (max-width: 400px) {
+      }
+    </style>
+  </head>
+  <body>
+    <div id="preview">
+      <table
+        role="presentation"
+        width="100%"
+        border="0"
+        cellpadding="0"
+        cellspacing="0"
+        style="
+          max-width: 600px;
+          font-family: Arial, Verdana, Helvetica, sans-serif;
+          line-height: 3px;
+          font-size: 1px;
+          padding: 0px;
+          border-spacing: 0px;
+          margin: 0px;
+          border-collapse: collapse;
+        "
+        class="email-container"
+      >
+        <tbody>
+          <tr>
+            <td>
+              <span
+                class="hori-line"
+                style="
+                  display: inline-block;
+                  width: 400px;
+                  height: 1px;
+                  background-color: #535352;
+                  margin-left: 20px;
+                "
+              ></span>
+            </td>
+          </tr>
+          <!--[if mso]>
+          <tr>
+            <td>
+              <table
+                width="350"
+                border="0"
+                cellpadding="0"
+                cellspacing="0"
+                style="
+                  font-family: Arial, Verdana, Helvetica, sans-serif;
+                  line-height: 0px;
+                  font-size: 1px;
+                  padding: 0px;
+                  border-spacing: 0px;
+                  margin: 0px;
+                  border-collapse: collapse;
+                  margin-left: 20px;
+                "
+              >
+                <tbody>
+                  <tr>
+                    <td
+                      class="hori-line"
+                      width="400"
+                      style="
+                        border-collapse: collapse;
+                        background-color: #535352;
+                        width: 400px;
+                      "
+                    >
+                      <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                      <!--[if mso]>
+                        <span
+                          class="hori-line"
+                          style="
+                            font-family: Arial, Verdana, Helvetica, sans-serif;
+                            font-weight: bold;
+                            width: 400px;
+                          "
+                          >_______________________________________________________</span
+                        >
+                     
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+           <![endif]-->
+          <tr style="height: 30px; margin: 0 auto">
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td>
+              <table width="100%" style="max-width: 200px" class="image-table">
+                <tr>
+                  <td>
+                    <img
+                      src="https://ylipson.de/wp-content/uploads/2021/03/Ylipson-Logo-Sign.png"
+                      width="100%"
+                    />
+                  </td>
+                </tr>
+              </table>
+            </td>
+            <!-- <td style="line-height: 0px" valign="middle">
+              <img
+                class="img-responsive"
+                width="300"
+                height="54"
+                alt="Company logo"
+                border="0"
+                src="https://ylipson.de/wp-content/uploads/2021/03/Ylipson-Logo-Sign.png"
+              />
+            </td> -->
+          </tr>
+          <tr style="height: 20px; margin: 0 auto">
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td
+              valign="middle"
+              style="font-size: 12px; font-style: normal; color: #2c2e35"
+            >
+              <span style="font-size: 12px; display: inline-block"
+                >&nbsp;&nbsp;&nbsp;&nbsp;</span
+              >
+              <span
+                style="
+                  font-family: Arial, Verdana, Helvetica, sans-serif;
+                  font-size: 12px;
+                  font-style: normal;
+                  color: #2c2e35;
+                  display: inline;
+                  letter-spacing: 1px;
+                "
+              >
+                <font face="Arial, Verdana, Helvetica, sans-serif"
+                  >KOLJA OSTROWSKI</font
+                >
+              </span>
+              <span
+                class="center-dot"
+                style="
+                  display: inline-block;
+                  vertical-align: middle;
+                  line-height: normal;
+                "
+                >.</span
+              >
+              <span
+                style="
+                  font-family: Arial, Verdana, Helvetica, sans-serif, sans-serif;
+                  font-size: 12px;
+                  font-style: normal;
+                  color: #009ce7;
+                  display: inline;
+                  letter-spacing: 1px;
+                "
+              >
+                <font face="Arial, Verdana, Helvetica, sans-serif">COO</font>
+              </span>
+            </td>
+          </tr>
+          <tr style="height: 10px; margin: 0 auto">
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td style="font-size: 12px; font-style: normal; color: #2c2e35">
+              <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+              <span
+                style="
+                  font-family: Arial, Verdana, Helvetica, sans-serif;
+                  font-size: 12px;
+                  font-style: normal;
+                  color: #2c2e35;
+                  display: inline;
+                "
+              >
+                T. +49 (0) 40 21909 1150</span
+              >
+              <span
+                class="center-dot"
+                style="
+                  display: inline-block;
+                  vertical-align: middle;
+                  line-height: normal;
+                "
+                >.</span
+              >
+              <span
+                style="
+                  font-family: Arial, Verdana, Helvetica, sans-serif;
+                  font-size: 12px;
+                  font-style: normal;
+                  color: #2c2e35;
+                  display: inline;
+                "
+              >
+                M. +49 (0) 162 101 1158</span
+              >
+              <span
+                class="center-dot"
+                style="
+                  display: inline-block;
+                  vertical-align: middle;
+                  line-height: normal;
+                "
+                >.</span
+              >
+            </td>
+          </tr>
+          <tr>
+            <td style="font-size: 12px; font-style: normal; color: #2c2e35">
+              <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+              <span
+                style="
+                  font-family: Arial, Verdana, Helvetica, sans-serif;
+                  font-size: 12px;
+                  font-style: normal;
+                  color: #2c2e35;
+                  display: inline;
+                "
+              >
+                kolja.ostrowski@ylipson.de</span
+              >
+              <span
+                class="center-dot"
+                style="
+                  display: inline-block;
+                  vertical-align: middle;
+                  line-height: normal;
+                "
+                >.</span
+              >
+              <span
+                style="
+                  font-family: Arial, Verdana, Helvetica, sans-serif;
+                  font-size: 12px;
+                  font-style: normal;
+                  color: #2c2e35;
+                  display: inline;
+                "
+              >
+                www.ylipson.de</span
+              >
+            </td>
+          </tr>
+          <tr style="height: 10px; margin: 0 auto">
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td style="font-size: 12px; font-style: normal; color: #2c2e35">
+              <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+              <span
+                style="
+                  font-family: Arial, Verdana, Helvetica, sans-serif;
+                  font-size: 12px;
+                  font-style: normal;
+                  color: #2c2e35;
+                  display: inline;
+                "
+              >
+                Ylipson GmbH</span
+              >
+              <span
+                class="center-dot"
+                style="
+                  display: inline-block;
+                  vertical-align: middle;
+                  line-height: normal;
+                "
+                >.</span
+              >
+              <span
+                style="
+                  font-family: Arial, Verdana, Helvetica, sans-serif;
+                  font-size: 12px;
+                  font-style: normal;
+                  color: #2c2e35;
+                  display: inline;
+                "
+              >
+                Harburger Schlo&beta;str. 24, 21079 Hamburg, Germany</span
+              >
+            </td>
+          </tr>
+
+          <tr>
+            <td style="font-size: 12px; font-style: normal; color: #2c2e35">
+              <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+              <span
+                style="
+                  font-family: Arial, Verdana, Helvetica, sans-serif;
+                  font-size: 12px;
+                  font-style: normal;
+                  color: #2c2e35;
+                  display: inline;
+                "
+              >
+                Gesch&auml;ftsf&uuml;hrer: Mario L. Susnjar</span
+              >
+              <span
+                class="center-dot"
+                style="
+                  display: inline-block;
+                  vertical-align: middle;
+                  line-height: normal;
+                "
+                >.</span
+              >
+              <span
+                style="
+                  font-family: Arial, Verdana, Helvetica, sans-serif;
+                  font-size: 12px;
+                  font-style: normal;
+                  color: #2c2e35;
+                  display: inline;
+                "
+              >
+                Kolja Ostrowski</span
+              >
+            </td>
+          </tr>
+
+          <tr style="height: 14px">
+            <td style="font-size: 12px; font-style: normal; color: #2c2e35">
+              <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+              <span
+                style="
+                  font-family: Arial, Verdana, Helvetica, sans-serif;
+                  font-size: 12px;
+                  font-style: normal;
+                  color: #2c2e35;
+                  display: inline;
+                "
+              >
+                HR Hamburg HRB 93203</span
+              >
+            </td>
+          </tr>
+
+          <tr style="height: 30px; margin: 0 auto">
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td>
+              <span
+                class="hori-line"
+                style="
+                  display: inline-block;
+                  width: 400px;
+                  height: 1px;
+                  background-color: #535352;
+                  margin-left: 20px;
+                "
+              ></span>
+            </td>
+          </tr>
+          <!--[if mso]>
+          <tr>
+            <td>
+              <table
+                width="350"
+                border="0"
+                cellpadding="0"
+                cellspacing="0"
+                style="
+                  font-family: Arial, Verdana, Helvetica, sans-serif;
+                  line-height: 0px;
+                  font-size: 1px;
+                  padding: 0px;
+                  border-spacing: 0px;
+                  margin: 0px;
+                  border-collapse: collapse;
+                  margin-left: 20px;
+                "
+              >
+                <tbody>
+                  <tr>
+                    <td
+                      class="hori-line"
+                      width="400"
+                      style="
+                        border-collapse: collapse;
+                        background-color: #535352;
+                        width: 300px;
+                      "
+                    >
+                      <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                      <!--[if mso]>
+                        <span
+                          class="hori-line"
+                          style="
+                            font-family: Arial, Verdana, Helvetica, sans-serif;
+                            font-weight: bold;
+                            width: 400px;
+                          "
+                          >_______________________________________________________</span
+                        >
+                     
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+           <![endif]-->
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
